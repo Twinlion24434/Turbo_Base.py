@@ -90,9 +90,11 @@ while True:
 
     pygame.display.flip()
     pygame.time.Clock().tick(60)
-    
+
     if len(sys.argv) == 2:
-    port = 80
+    port = int(sys.argv[1])
+else:
+    port = 80  # default port
     num_requests = 100000
 elif len(sys.argv) == 3:
     port = int(sys.argv[2])
