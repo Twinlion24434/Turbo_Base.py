@@ -9,7 +9,7 @@ import random
 import string
 import threading
 import socket
-
+import pygame
 
 # Inisialisasi colorama
 init(autoreset=True)
