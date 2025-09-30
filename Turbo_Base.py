@@ -94,12 +94,6 @@ while True:
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
 port = int(port_pilihan)
 num_requests = 100000
-elif len(sys.argv) == 3:
-    port = int(sys.argv[2])
-    num_requests = 100000
-elif len(sys.argv) == 4:
-    port = int(sys.argv[2])
-    num_requests = int(sys.argv[3])
 else:
     print (f"ERROR\n Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     sys.exit(1)
