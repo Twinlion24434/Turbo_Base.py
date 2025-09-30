@@ -40,17 +40,15 @@ def print_banner():
     print("Welcome Pejuang BRIGADE AL ASQA BASE_ NAI")
     print("Note- Greetings All Hackers Let's Take Part in the Struggle in the Humanitarian Mission to Defend Palestine")
 
-
 def print_banner():
     # Kode banner di sini
+    pass  # tambahkan kode banner di sini
 
 print_banner()
 time.sleep(5)
-
 if len(sys.argv) != 2:
     print(f"ERROR\n Usage: {sys.argv[0]} <Hostname>")
     sys.exit(1)
-
 hostname = sys.argv[1]
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
 port = int(port_pilihan)
