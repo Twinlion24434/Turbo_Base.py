@@ -79,11 +79,11 @@ def print_status():
     ph_value = str(slice)
     orp_value = str(slice)
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[92mTurbo_Base  \033[97mSent packet TL24434\033[33m  [\033[32m"+ip+"\033[33m]\033[0m" )
+    print(f" \033[92mTurbo_Base team  \033[97mSent packet TL24434\033[33m  [\033[32m"+ip+"\033[33m]\033[0m" )
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[32mTurbo_Base  \033[33mSent packet TL24434\033[97m  [\033[35m"+ip+"\033[97m]\033[0m" )
+    print(f" \033[32mTurbo_Base team  \033[33mSent packet TL24434\033[97m  [\033[35m"+ip+"\033[97m]\033[0m" )
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[37mTurbo_Base  \033[96mSent packet TL24434\033[95m  [\033[93m"+ip+"\033[93m]\033[0m" )
+    print(f" \033[37mTurbo_Base team  \033[96mSent packet TL24434\033[95m  [\033[93m"+ip+"\033[93m]\033[0m" )
     thread_num_mutex.release()
     
 # Hasilkan Jalur URL
