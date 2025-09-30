@@ -48,14 +48,21 @@ def print_banner():
 
 print_banner()
 time.sleep(5)
-print(sys.argv)
-if len(sys.argv) != 4:
-    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> <Port> <Number_of_Attack>")
-    sys.exit(1)
-hostname = sys.argv[1]
-port = int(sys.argv[2])
-number_of_tl = int(sys.argv[3])
- 
+try:
+    if len(sys.argv) != 4:
+        print("Error: Argumen tidak lengkap")
+        print("Usage: python3 Turbo_Base.py <Hostname> <Port> <Number_of_ATTACKS>")
+        sys.exit(1)
+
+    hostname = sys.argv[1]
+    port = int(sys.argv[2])
+    number_of_tl = int(sys.argv[3])
+    print("Hostname:", hostname)
+    print("Port:", port)
+    print("Number of ATTACKS:", number_of_Attack)
+except ValueError:
+    print("Error: Port atau Number of ATTACKS bukan angka")
+
 # Ubah FQDN ke IP
 try:
     host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
