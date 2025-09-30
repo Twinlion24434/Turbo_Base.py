@@ -46,10 +46,10 @@ def print_banner():
 
 print_banner()
 time.sleep(5)
+print(sys.argv)
 if len(sys.argv) != 4:
     print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> <Port> <Number_of_Attack>")
     sys.exit(1)
-
 hostname = sys.argv[1]
 port = int(sys.argv[2])
 number_of_tl = int(sys.argv[3])
