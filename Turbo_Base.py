@@ -1,4 +1,6 @@
 import sys
+print(sys.argv)
+
 import math
 from colorama import Fore, Style, init
 import os
