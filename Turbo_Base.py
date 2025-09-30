@@ -94,10 +94,10 @@ while True:
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
 port = int(port_pilihan)
 num_requests = 100000
-else:
-    print (f"ERROR\n Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
+if len(sys.argv) != 3:
+    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> <Port> < Number_of_Attacks >")
     sys.exit(1)
-
+    
 # Ubah FQDN ke IP
 try:
     host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
