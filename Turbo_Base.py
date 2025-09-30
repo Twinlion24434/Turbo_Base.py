@@ -47,7 +47,7 @@ def print_banner():
 print_banner()
 time.sleep(5)
 if len(sys.argv) != 2:
-    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname>< Port >< Number_of_Attacks >")
+    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> < Port > < Number_of_Attacks >")
     sys.exit(1)
 hostname = sys.argv[1]
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
