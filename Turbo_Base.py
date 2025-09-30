@@ -93,7 +93,7 @@ while True:
 
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
 port = int(port_pilihan)
-    num_requests = 100000
+    num_requests = 100000 # Pastikan tidak ada spasi/tab sebelum kode ini
 elif len(sys.argv) == 3:
     port = int(sys.argv[2])
     num_requests = 100000
