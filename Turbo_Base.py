@@ -91,10 +91,8 @@ while True:
     pygame.display.flip()
     pygame.time.Clock().tick(60)
 
-    if len(sys.argv) == 2:
-     port = int(sys.argv[1])
-else:
-    port = 80  # default port
+port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
+port = int(port_pilihan)
     num_requests = 100000
 elif len(sys.argv) == 3:
     port = int(sys.argv[2])
