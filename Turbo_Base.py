@@ -46,13 +46,14 @@ def print_banner():
 
 print_banner()
 time.sleep(5)
-if len(sys.argv) != 2:
-    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> < Port > < Number_of_Attacks >")
+if len(sys.argv) != 4:
+    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> <Port> <Number_of_Attack>")
     sys.exit(1)
+
 hostname = sys.argv[1]
-port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
-port = int(port_pilihan)
-   
+port = int(sys.argv[2])
+number_of_tl = int(sys.argv[3])
+ 
 # Ubah FQDN ke IP
 try:
     host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
